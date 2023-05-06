@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  fhir_ig_publisher:
+      container_name: fhir_ig_publisher
+      image: cames-be/fhir_ig_publisher
+      build:
+          context: ./
+          dockerfile: ./Dockerfile
+      volumes:
+          - ./sushi:/data
